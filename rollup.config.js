@@ -21,7 +21,7 @@ export default {
   input: 'my-element.js',
   output: [
     {
-      file: 'graph-element.bundled.js',
+      file: './build/graph-element.bundled.js',
       format: 'esm',
     },
     {

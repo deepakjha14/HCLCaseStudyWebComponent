@@ -67,13 +67,12 @@ export class TopStocks extends LitElement {
 
   firstUpdated(changedProperties) {
     const chartDiv = this.shadowRoot.getElementById('ABCCorpContainer');
-    this.chart = new CanvasJS.Chart(chartDiv, 
-    {
+    this.chart = new CanvasJS.Chart(chartDiv, {
       animationEnabled: true,
-      exportEnabled: false,
-      theme: this.chartData.theme || "light", // "light1", "light2", "dark1", "dark2"
+      exportEnabled: true,
+      theme: "light1", // "light1", "light2", "dark1", "dark2"
       title:{
-        text: this.chartData.text || "ABC Corp. Graph"
+        text: "Simple Column Chart with Index Labels"
       },
         axisY: {
           includeZero: true
@@ -82,13 +81,12 @@ export class TopStocks extends LitElement {
         type: "column", //change type to bar, line, area, pie, etc
         //indexLabel: "{y}", //Shows y value on all Data Points
         indexLabelFontColor: "#5A5757",
-        indexLabelFontSize: 16,
+            indexLabelFontSize: 16,
         indexLabelPlacement: "outside",
         dataPoints: this.chartData.plotData
       }]
     });
   }
-
 }
 
 window.customElements.define('top-stocks', TopStocks);

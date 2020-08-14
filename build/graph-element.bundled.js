@@ -181,4 +181,4 @@ class Q extends K{static get styles(){return Z`
       <button @click=${this._onClick} part="button">
         Refresh
       </button>
-    `}_onClick(){this.chart.render()}firstUpdated(t){const s=this.shadowRoot.getElementById("ABCCorpContainer");this.chart=new CanvasJS.Chart(s,{animationEnabled:!0,theme:"light1",title:{text:"Simple Column Chart with Index Labels"},axisY:{includeZero:!0},data:[{type:"column",indexLabelFontColor:"#5A5757",indexLabelFontSize:16,indexLabelPlacement:"outside",dataPoints:this.chartData.plotData}]})}}window.customElements.define("top-stocks",Q);export{Q as TopStocks};
+    `}_onClick(){this.chart.render()}firstUpdated(t){const s=this.shadowRoot.getElementById("ABCCorpContainer");this.chart=new CanvasJS.Chart(s,{animationEnabled:!0,theme:this.chartData.theme||"light1",title:{text:"Simple Column Chart with Index Labels"},axisY:{includeZero:!0},data:[{type:"column",indexLabelFontColor:"#5A5757",indexLabelFontSize:16,indexLabelPlacement:"outside",dataPoints:this.chartData.plotData}]})}}window.customElements.define("top-stocks",Q);export{Q as TopStocks};

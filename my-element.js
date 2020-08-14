@@ -71,7 +71,7 @@ export class TopStocks extends LitElement {
       animationEnabled: true,
       theme: this.chartData.theme || "light1", // "light1", "light2", "dark1", "dark2"
       title:{
-        text: "Simple Column Chart with Index Labels"
+        text: this.chartData.theme || "ABC Corp. Top Performers"
       },
         axisY: {
           includeZero: true

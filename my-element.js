@@ -55,14 +55,7 @@ export class TopStocks extends LitElement {
   render() {
     return html`
       <div id=${this.chartId} style="height: 300px; width: 100%;"></div>
-      <button @click=${this._onClick} part="button">
-        Refresh
-      </button>
     `;
-  }
-
-  _onClick() {
-    this.chart.render();
   }
 
   firstUpdated(changedProperties) {
@@ -85,6 +78,8 @@ export class TopStocks extends LitElement {
         dataPoints: this.chartData.plotData
       }]
     });
+
+    this.chart.render();
   }
 }
 

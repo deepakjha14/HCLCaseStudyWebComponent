@@ -69,7 +69,6 @@ export class TopStocks extends LitElement {
     const chartDiv = this.shadowRoot.getElementById('ABCCorpContainer');
     this.chart = new CanvasJS.Chart(chartDiv, {
       animationEnabled: true,
-      exportEnabled: true,
       theme: "light1", // "light1", "light2", "dark1", "dark2"
       title:{
         text: "Simple Column Chart with Index Labels"

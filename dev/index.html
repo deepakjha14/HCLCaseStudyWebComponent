@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>&lt;my-element> Demo</title>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script module="" src="../graph-element.bundle.min.js"></script>
+    <script src="./canvasjs.min.js" ></script>
+    <script type="module" src="../my-element.js"></script>
     
     <style>
       p {
@@ -15,6 +15,9 @@
     </style>
   </head>
   <body>
-    <top-stocks></top-stocks>
+    <script>
+      var myObject = [{ "x": 10, "y": 71, "indexLabel" : "Apple" },{ "x": 20, "y": 55 },{ "x": 30, "y": 50 },{ "x": 40, "y": 65 }, { "x": 50, "y": 92 }];
+    </script>
+    <top-stocks name='Deepakjha' chartData='{"plotData":[{ "x": 10, "y": 71 },{ "x": 20, "y": 55 },{ "x": 30, "y": 50 },{ "x": 40, "y": 65 }, { "x": 50, "y": 92 }]}'></top-stocks>
   </body>
 </html>
